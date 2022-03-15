@@ -56,17 +56,15 @@ public class GameTest {
     }
 
     void gameSetup(){
-        Room room1 = new Room("room1","A small room, with a broken lamp and one chair... interesting");
-        Room room2 = new Room("room2","In this room a big living room with a couch");
-        Room room3 = new Room("room3","");
-        Room room4 = new Room("room4","");
-        Room room5 = new Room("room5","");
-        Room room6 = new Room("room6","");
-        Room room7 = new Room("room7","");
-        Room room8 = new Room("room8","");
-        Room room9 = new Room("room9","");
-        currentRoom = room1;
-
+        Room room1 = new Room("john","sko");
+        Room room2 = new Room();
+        Room room3 = new Room();
+        Room room4 = new Room();
+        Room room5 = new Room();
+        Room room6 = new Room();
+        Room room7 = new Room();
+        Room room8 = new Room();
+        Room room9 = new Room();
         room1.setEast(room2);
         room1.setSouth(room4);
         room2.setEast(room3);
