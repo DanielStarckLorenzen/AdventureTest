@@ -1,29 +1,14 @@
-import java.util.Scanner;
-/*
-public class Room {
-    private String direction;
-    private String look;
-    private String listOfThings;
-    private String name;
 
-
-    Room() {
-
-        }
-
-
-} */
 public class Room{
     private Room north;
     private Room south;
     private Room east;
     private Room west;
-    private String name;
+    //private String name;
     private String listOfThings;
 
     Room(){};
-    Room(String name, String listOfThings){
-        this.name = name;
+    Room(String listOfThings){
         this.listOfThings = listOfThings;
     };
 
@@ -41,13 +26,6 @@ public class Room{
     }
     String getListOfThings(){
         return listOfThings;
-    }
-
-    void setName(String name){
-        this.name = name;
-    }
-    String getName(){
-        return name;
     }
     Room getNorth(){
         return north;
