@@ -95,20 +95,6 @@ public class GameTest {
                 "among the shattered glass, are broken picture frames");
         Room room3 = new Room("Room 3","You entered the dining room, there is a big old clock which is very loud,"+
                 " dining table has mold growing on it");
-        Room room4 = new Room("Room 4","");
-        Room room5 = new Room("Room 5","");
-        Room room6 = new Room("Room 6","");
-        Room room7 = new Room("Room 7","The room seems to be a bedroom but it's very dark. " +
-                "You can feel cobweb all over you and see a little reflection near the night stand.");
-        Room room8 = new Room("Room 8","You are in what seems to be the kitchen. " +
-                "It's very smokey and hard to see. " +
-                "You can faintly see a staircase but can't put a finger on the which way to get to it.");
-        Room room9 = new Room("Room 9","Room 9 seems to be the bathroom. " +
-                "It's very cold since a small window is broken and banging against the outside bricks. " +
-                "You see the medicine closet is slightly open.");
-        Room room1 = new Room();
-        Room room2 = new Room();
-        Room room3 = new Room();
         Room room4 = new Room("Back entrance", "You are standing on a rotten carpet." +
                 "A bit of light enters through a broken window." +
                 "A sweet smell of decay comes from the the southern door");
@@ -117,9 +103,15 @@ public class GameTest {
         Room room6 = new Room("The Lounge", "There are no windows in this room." +
                 "The only light is a small candlelight in the southeastern corner." +
                 "A door to the south is ajar.");
-        Room room7 = new Room();
-        Room room8 = new Room();
-        Room room9 = new Room();
+        Room room7 = new Room("Room 7","The room seems to be a bedroom but it's very dark. " +
+                "You can feel cobweb all over you and see a little reflection near the night stand.");
+        Room room8 = new Room("Room 8","You are in what seems to be the kitchen. " +
+                "It's very smokey and hard to see. " +
+                "You can faintly see a staircase but can't put a finger on the which way to get to it.");
+        Room room9 = new Room("Room 9","Room 9 seems to be the bathroom. " +
+                "It's very cold since a small window is broken and banging against the outside bricks. " +
+                "You see the medicine closet is slightly open.");
+
         room1.setEast(room2);
         room1.setSouth(room4);
         room2.setEast(room3);
