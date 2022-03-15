@@ -15,7 +15,7 @@ public class GameTest {
         System.out.println("Hi " + name + ", You have to pick a path to a new room, which path do you choose?\n" +
                 "North, East, South or West?");
 
-        direction = scan.nextLine().toLowerCase().replace(" ","");
+        direction = scan.nextLine();
 
         System.out.println("Going " + direction);
 
@@ -25,6 +25,13 @@ public class GameTest {
         if (look.equals("look")) {
             System.out.println("Looking around");
             System.out.println();
+        }
+
+        switch (direction) {
+            case "north", "n", "go north" -> goNorth();
+            case "south", "s", "go south" -> goSouth();
+            case "east", "e", "go east" -> goEast();
+            case "west", "w", "go west" -> goWest();
         }
     }
 
