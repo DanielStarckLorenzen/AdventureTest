@@ -59,16 +59,16 @@ public class GameTest {
     }
 
     void goNorth(){
-        currentRoom = currentRoom.getNorth;
+        currentRoom = currentRoom.getNorth();
     }
     void goSouth(){
-        currentRoom = currentRoom.getSouth;
+        currentRoom = currentRoom.getSouth();
     }
     void goEast(){
-        currentRoom = currentRoom.getEast;
+        currentRoom = currentRoom.getEast();
     }
     void goWest(){
-        currentRoom = currentRoom.getWest;
+        currentRoom = currentRoom.getWest();
     }
 
     public static void main(String[] args) {
