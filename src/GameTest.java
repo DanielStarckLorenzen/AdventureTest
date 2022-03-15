@@ -4,6 +4,7 @@ public class GameTest {
     private String direction;
     private String look;
     private String name;
+    Room currentRoom;
 
 
     Scanner scan = new Scanner(System.in);
@@ -55,6 +56,19 @@ public class GameTest {
     room7.setNorth(room4);
     room4.setSouth(room7);
     room4.setNorth(room1);
+    }
+
+    void goNorth(){
+        currentRoom = currentRoom.getNorth;
+    }
+    void goSouth(){
+        currentRoom = currentRoom.getSouth;
+    }
+    void goEast(){
+        currentRoom = currentRoom.getEast;
+    }
+    void goWest(){
+        currentRoom = currentRoom.getWest;
     }
 
     public static void main(String[] args) {
