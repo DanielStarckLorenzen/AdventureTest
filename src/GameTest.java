@@ -9,23 +9,20 @@ public class GameTest {
 
     Scanner scan = new Scanner(System.in);
 
-    void userInterface() {
+    void introduction() {
         System.out.print("What is your name? ");
         name = scan.nextLine();
+    }
+    void whichDirection() {
         System.out.println("Hi " + name + ", You have to pick a path to a new room, which path do you choose?\n" +
                 "North, East, South or West?");
-
         direction = scan.nextLine();
-
         System.out.println("Going " + direction);
+    }
 
-        System.out.println("You can also use the command 'look' to look around");
+    void userInterface() {
+        System.out.println("You can use the command 'look' to look around");
         look = scan.nextLine();
-
-        if (look.equals("look")) {
-            System.out.println("Looking around");
-            System.out.println();
-        }
 
         switch (direction) {
             case "north", "n", "go north" -> goNorth();
@@ -36,9 +33,10 @@ public class GameTest {
     }
 
     void go() {
-        //userInterface();
+        introduction();
+        whichDirection();
         gameSetup();
-
+        userInterface();
     }
 
     void goNorth(){
@@ -58,15 +56,17 @@ public class GameTest {
     }
 
     void gameSetup(){
-        Room room1 = new Room();
-        Room room2 = new Room();
-        Room room3 = new Room();
-        Room room4 = new Room();
-        Room room5 = new Room();
-        Room room6 = new Room();
-        Room room7 = new Room();
-        Room room8 = new Room();
-        Room room9 = new Room();
+        Room room1 = new Room("room1","A small room, with a broken lamp and one chair... interesting");
+        Room room2 = new Room("room2","In this room a big living room with a couch");
+        Room room3 = new Room("room3","");
+        Room room4 = new Room("room4","");
+        Room room5 = new Room("room5","");
+        Room room6 = new Room("room6","");
+        Room room7 = new Room("room7","");
+        Room room8 = new Room("room8","");
+        Room room9 = new Room("room9","");
+        currentRoom = room1;
+
         room1.setEast(room2);
         room1.setSouth(room4);
         room2.setEast(room3);
@@ -84,9 +84,8 @@ public class GameTest {
         room7.setNorth(room4);
         room4.setSouth(room7);
         room4.setNorth(room1);
-
-        currentRoom = room1;
     }
+
 
     public static void main(String[] args) {
         new GameTest().go();
