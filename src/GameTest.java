@@ -9,25 +9,31 @@ public class GameTest {
 
     Scanner scan = new Scanner(System.in);
 
-    void userInterface() {
+    void intro() {
         System.out.print("What is your name? ");
         name = scan.nextLine();
-        System.out.println("Hi " + name + ", You have to pick a path to a new room, which path do you choose?\n" +
-                "North, East, South or West?");
+        System.out.println("Hi " + name + " ");
+    }
 
-        direction = scan.nextLine();
+    void look() {
 
-        System.out.println("Going " + direction);
+    }
 
-        System.out.println("You can also use the command 'look' to look around");
-        look = scan.nextLine();
+    void help() {
+        System.out.println("Type \"Go north/south/east/west\" to go that way" +
+                "\nType \"look\" to look at your surroundnings" +
+                "\nType \"Exit\" to exit the game");
+    }
 
-        if (look.equals("look")) {
-            System.out.println("Looking around");
-            System.out.println();
-        }
+    void userInterface() {
+        System.out.println("What do you want to do?" +
+                "\nType help to get commands");
+        String answer = scan.nextLine();
 
-        switch (direction) {
+        switch (answer) {
+            case "help" -> help();
+            case "exit" -> System.out.println("You exited the program");
+            case "look" -> look();
             case "north", "n", "go north" -> goNorth();
             case "south", "s", "go south" -> goSouth();
             case "east", "e", "go east" -> goEast();
@@ -35,23 +41,29 @@ public class GameTest {
         }
     }
 
+
     void go() {
-        //userInterface();
         gameSetup();
+        intro();
+        userInterface();
 
     }
 
     void goNorth(){
         currentRoom = currentRoom.getNorth();
+        System.out.println("You go north");
     }
     void goSouth(){
         currentRoom = currentRoom.getSouth();
+        System.out.println("You go south");
     }
     void goEast(){
         currentRoom = currentRoom.getEast();
+        System.out.println("You go east");
     }
     void goWest(){
         currentRoom = currentRoom.getWest();
+        System.out.println("You go west");
     }
     void doesNotExist(){
         System.out.println("There is no door in this direction");
