@@ -4,6 +4,7 @@ public class GameTest {
     private String direction;
     private String look;
     private String name;
+    private boolean gameOn = true;
     Room currentRoom;
 
 
@@ -16,13 +17,16 @@ public class GameTest {
     }
 
     void look() {
-
+        System.out.println(currentRoom.getListOfThings());
+        System.out.println();
+        userInterface();
     }
 
     void help() {
         System.out.println("Type \"Go north/south/east/west\" to go that way" +
                 "\nType \"look\" to look at your surroundnings" +
                 "\nType \"Exit\" to exit the game");
+        System.out.println();
         userInterface();
     }
 
@@ -33,12 +37,12 @@ public class GameTest {
 
         switch (answer) {
             case "help" -> help();
-            case "exit" -> System.out.println("You exited the program");
+            case "exit" -> gameOn = false;
             case "look" -> look();
-            case "north", "n", "go north" -> goNorth();
-            case "south", "s", "go south" -> goSouth();
-            case "east", "e", "go east" -> goEast();
-            case "west", "w", "go west" -> goWest();
+            case "north", "n", "go north", "walk north" -> goNorth();
+            case "south", "s", "go south", "walk south" -> goSouth();
+            case "east", "e", "go east", "walk east" -> goEast();
+            case "west", "w", "go west", "walk west" -> goWest();
         }
     }
 
@@ -46,8 +50,9 @@ public class GameTest {
     void go() {
         gameSetup();
         intro();
-        userInterface();
-
+        while (gameOn) {
+            userInterface();
+        }
     }
 
     void goNorth(){
@@ -55,6 +60,8 @@ public class GameTest {
             currentRoom = currentRoom.getNorth();
             System.out.println("You go north");
             System.out.println("Entering " + currentRoom.getName());
+            look();
+            System.out.println();
         } else doesNotExist();
     }
     void goSouth(){
@@ -62,6 +69,8 @@ public class GameTest {
             currentRoom = currentRoom.getSouth();
             System.out.println("You go south");
             System.out.println("Entering " + currentRoom.getName());
+            look();
+            System.out.println();
         } else doesNotExist();
     }
     void goEast(){
@@ -69,6 +78,8 @@ public class GameTest {
             currentRoom = currentRoom.getEast();
             System.out.println("You go east");
             System.out.println("Entering " + currentRoom.getName());
+            look();
+            System.out.println();
         } else doesNotExist();
     }
     void goWest(){
@@ -76,23 +87,30 @@ public class GameTest {
             currentRoom = currentRoom.getWest();
             System.out.println("You go west");
             System.out.println("Entering " + currentRoom.getName());
+            look();
+            System.out.println();
         } else doesNotExist();
     }
     void doesNotExist(){
-        System.out.println("There is no door in this direction");
+        System.out.println("There is no door in this direction\n");
         userInterface();
     }
 
     void gameSetup(){
-        Room room1 = new Room();
-        Room room2 = new Room();
-        Room room3 = new Room();
-        Room room4 = new Room();
-        Room room5 = new Room();
-        Room room6 = new Room();
-        Room room7 = new Room();
-        Room room8 = new Room();
-        Room room9 = new Room();
+        Room room1 = new Room("Room 1","");
+        Room room2 = new Room("Room 2","");
+        Room room3 = new Room("Room 3","");
+        Room room4 = new Room("Room 4","");
+        Room room5 = new Room("Room 5","");
+        Room room6 = new Room("Room 6","");
+        Room room7 = new Room("Room 7","The room seems to be a bedroom but it's very dark. " +
+                "You can feel cobweb all over you and see a little reflection near the night stand.");
+        Room room8 = new Room("Room 8","You are in what seems to be the kitchen. " +
+                "It's very smokey and hard to see. " +
+                "You can faintly see a staircase but can't put a finger on the which way to get to it.");
+        Room room9 = new Room("Room 9","Room 9 seems to be the bathroom. " +
+                "It's very cold since a small window is broken and banging against the outside bricks. " +
+                "You see the medicine closet is slightly open.");
         room1.setEast(room2);
         room1.setSouth(room4);
         room2.setEast(room3);
