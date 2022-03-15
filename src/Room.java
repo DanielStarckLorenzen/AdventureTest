@@ -43,8 +43,24 @@ public class Room{
         return listOfThings;
     }
 
-
-
+    void setName(String name){
+        this.name = name;
+    }
+    String getName(){
+        return name;
+    }
+    Room getNorth(){
+        return north;
+    }
+    Room getSouth(){
+        return south;
+    }
+    Room getEast(){
+        return east;
+    }
+    Room getWest() {
+        return east;
+    }
 }
 
 
