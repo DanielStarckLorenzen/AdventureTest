@@ -4,13 +4,17 @@ public class Room{
     private Room south;
     private Room east;
     private Room west;
-    //private String name;
+    private String name;
     private String listOfThings;
 
     Room(){};
-    Room(String listOfThings){
+    Room(String name, String listOfThings){
+        this.name = name;
         this.listOfThings = listOfThings;
     };
+    String getName(){
+        return name;
+    }
 
     void setNorth(Room north){
         this.north = north;

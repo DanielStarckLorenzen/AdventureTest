@@ -43,22 +43,26 @@ public class GameTest {
 
     void goNorth(){
         currentRoom = currentRoom.getNorth();
+        System.out.println("Going north \n entering " + currentRoom.getName());
     }
     void goSouth(){
         currentRoom = currentRoom.getSouth();
+        System.out.println("Going south \n entering " + currentRoom.getName());
     }
     void goEast(){
         currentRoom = currentRoom.getEast();
+        System.out.println("Going east \n entering " + currentRoom.getName());
     }
     void goWest(){
         currentRoom = currentRoom.getWest();
+        System.out.println("Going west \n entering " + currentRoom.getName());
     }
     void doesNotExist(){
         System.out.println("There is no door in this direction");
     }
 
     void gameSetup(){
-        Room room1 = new Room();
+        Room room1 = new Room("john","sko");
         Room room2 = new Room();
         Room room3 = new Room();
         Room room4 = new Room();
