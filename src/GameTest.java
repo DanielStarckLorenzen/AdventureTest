@@ -97,9 +97,11 @@ public class GameTest {
     }
 
     void gameSetup(){
-        Room room1 = new Room("Room 1","");
-        Room room2 = new Room("Room 2","");
-        Room room3 = new Room("Room 3","");
+        Room room1 = new Room("Room 1","You stand in front of a decaying house, and spot two doors");
+        Room room2 = new Room("Room 2","You entered the main entrance, there is broken glass all over the ground," +"" +
+                "among the shattered glass, are broken picture frames");
+        Room room3 = new Room("Room 3","You entered the dining room, there is a big old clock which is very loud,"+
+                " dining table has mold growing on it");
         Room room4 = new Room("Room 4","");
         Room room5 = new Room("Room 5","");
         Room room6 = new Room("Room 6","");
