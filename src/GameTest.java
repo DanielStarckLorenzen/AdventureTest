@@ -23,6 +23,7 @@ public class GameTest {
         System.out.println("Type \"Go north/south/east/west\" to go that way" +
                 "\nType \"look\" to look at your surroundnings" +
                 "\nType \"Exit\" to exit the game");
+        userInterface();
     }
 
     void userInterface() {
@@ -50,23 +51,36 @@ public class GameTest {
     }
 
     void goNorth(){
-        currentRoom = currentRoom.getNorth();
-        System.out.println("You go north");
+        if(currentRoom.getNorth() != null) {
+            currentRoom = currentRoom.getNorth();
+            System.out.println("You go north");
+            System.out.println("Entering " + currentRoom.getName());
+        } else doesNotExist();
     }
     void goSouth(){
-        currentRoom = currentRoom.getSouth();
-        System.out.println("You go south");
+        if(currentRoom.getSouth() != null) {
+            currentRoom = currentRoom.getSouth();
+            System.out.println("You go south");
+            System.out.println("Entering " + currentRoom.getName());
+        } else doesNotExist();
     }
     void goEast(){
-        currentRoom = currentRoom.getEast();
-        System.out.println("You go east");
+        if(currentRoom.getEast() != null) {
+            currentRoom = currentRoom.getEast();
+            System.out.println("You go east");
+            System.out.println("Entering " + currentRoom.getName());
+        } else doesNotExist();
     }
     void goWest(){
-        currentRoom = currentRoom.getWest();
-        System.out.println("You go west");
+        if(currentRoom.getWest() != null) {
+            currentRoom = currentRoom.getWest();
+            System.out.println("You go west");
+            System.out.println("Entering " + currentRoom.getName());
+        } else doesNotExist();
     }
     void doesNotExist(){
         System.out.println("There is no door in this direction");
+        userInterface();
     }
 
     void gameSetup(){

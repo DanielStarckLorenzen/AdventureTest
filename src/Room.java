@@ -28,6 +28,9 @@ public class Room{
     String getListOfThings(){
         return listOfThings;
     }
+    String getName(){
+        return name;
+    }
     Room getNorth(){
         return north;
     }
@@ -38,7 +41,7 @@ public class Room{
         return east;
     }
     Room getWest() {
-        return east;
+        return west;
     }
 }
 
