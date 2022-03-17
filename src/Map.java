@@ -2,11 +2,14 @@ public class Map {
     Room startRoom = new Room();
 
     void gameSetup(){
-        Room room1 = new Room("The Field","You stand in front of a decaying house, and spot two doors");
-        Room room2 = new Room("Main Entrance","You entered the main entrance, there is broken glass all over the ground," +"" +
-                "among the shattered glass, are broken picture frames");
-        Room room3 = new Room("Dining Room","You entered the dining room, there is a big old clock which is very loud,"+
-                " dining table has mold growing on it");
+        Room room1 = new Room("The Field", """
+                You stand in front of a decaying house, and spot two doors""");
+        Room room2 = new Room("Main Entrance","""
+            You entered the main entrance, there is broken glass all over the ground,
+            among the shattered glass, are broken picture frames""");
+        Room room3 = new Room("Dining Room","""
+                You entered the dining room, there is a big old clock which is very loud,
+                dining table has mold growing on it""");
         Room room4 = new Room("Back entrance", "You are standing on a rotten carpet." +
                 "A bit of light enters through a broken window." +
                 "A sweet smell of decay comes from the the southern door");

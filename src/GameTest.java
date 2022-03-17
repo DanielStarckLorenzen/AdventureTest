@@ -16,8 +16,10 @@ public class GameTest {
         }
     }
     void userInterface() {
-        System.out.println("What do you want to do?" +
-                "\nType help to get commands");
+        System.out.println("""
+
+                What do you want to do?
+                Type help to get commands""");
         String answer = scan.nextLine().toLowerCase();
 
         switch (answer) {

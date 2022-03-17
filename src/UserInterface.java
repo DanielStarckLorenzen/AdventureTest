@@ -4,6 +4,7 @@ public class UserInterface {
     Scanner scan = new Scanner(System.in);
 
 
+
     void intro() {
         String name;
         System.out.print("What is your name? ");
@@ -15,7 +16,7 @@ public class UserInterface {
     void help() {
         System.out.println("""
                 Type "Go north/south/east/west" to go that way
-                Type "look" to look at your surroundnings
+                Type "look" to look at your surroundings
                 Type "Exit" to exit the game""");
         //game.userInterface();
     }
