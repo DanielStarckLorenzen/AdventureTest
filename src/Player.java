@@ -1,44 +1,10 @@
-import java.util.Scanner;
-
-public class GameTest {
+public class Player {
     Room currentRoom;
-    boolean gameOn = true;
-    Map map = new Map();
     UserInterface ui = new UserInterface();
-    Scanner scan = new Scanner(System.in);
 
-    void go() {
-        map.gameSetup();
-        currentRoom = map.getStartRoom();
-        ui.intro();
-        while(gameOn) {
-            userInterface();
-        }
-    }
-    void userInterface() {
-        System.out.println("""
-
-                What do you want to do?
-                Type help to get commands""");
-        String answer = scan.nextLine().toLowerCase();
-
-        switch (answer) {
-            case "help" -> ui.help();
-            case "exit" -> {
-                ui.exit();
-                gameOn = false;
-            }
-            case "look" -> look();
-            case "north", "n", "go north" -> goNorth();
-            case "south", "s", "go south" -> goSouth();
-            case "east", "e", "go east" -> goEast();
-            case "west", "w", "go west" -> goWest();
-        }
-    }
     void look() {
         System.out.println(currentRoom.getListOfThings());
     }
-
     void goNorth(){
         if(currentRoom.getNorth() != null) {
             currentRoom = currentRoom.getNorth();
@@ -72,4 +38,3 @@ public class GameTest {
         } else ui.doesNotExist();
     }
 }
-
