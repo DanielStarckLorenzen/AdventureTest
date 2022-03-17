@@ -1,7 +1,6 @@
 public class Player {
     Room currentRoom;
     UserInterface ui = new UserInterface();
-
     void look() {
         System.out.println(currentRoom.getListOfThings());
     }

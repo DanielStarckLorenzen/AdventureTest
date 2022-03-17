@@ -19,7 +19,6 @@ public class UserInterface {
                 Type "Go north/south/east/west" to go that way
                 Type "look" to look at your surroundings
                 Type "Exit" to exit the game""");
-
     }
     void playerChoice() {
         System.out.println("""

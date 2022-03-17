@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Game {
+public class GameTest {
 
     boolean gameOn = true;
     Map map = new Map();
