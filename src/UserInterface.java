@@ -26,10 +26,4 @@ public class UserInterface {
         System.out.println("There is no door in this direction");
         //game.userInterface();
     }
-
-
-    void exit(){
-        System.out.println("You exited the program");
-        //game.gameOn = false;
-    }
 }

@@ -10,22 +10,28 @@ public class Map {
         Room room3 = new Room("Dining Room","""
                 You entered the dining room, there is a big old clock which is very loud,
                 dining table has mold growing on it""");
-        Room room4 = new Room("Back entrance", "You are standing on a rotten carpet." +
-                "A bit of light enters through a broken window." +
-                "A sweet smell of decay comes from the the southern door");
-        Room room5 = new Room("The dungeon", "All dark. You have no sense of direction." +
-                "Some heavy creature is breathing nearby. It seems to be coming your way.");
-        Room room6 = new Room("The Lounge", "There are no windows in this room." +
-                "The only light is a small candlelight in the southeastern corner." +
-                "A door to the south is ajar.");
-        Room room7 = new Room("Bedroom","The room seems to be a bedroom but it's very dark. " +
-                "You can feel cobweb all over you and see a little reflection near the night stand.");
-        Room room8 = new Room("Kitchen","You are in what seems to be the kitchen. " +
-                "It's very smokey and hard to see. " +
-                "You can faintly see a staircase but can't put a finger on the which way to get to it.");
-        Room room9 = new Room("Bathroom","Room 9 seems to be the bathroom. " +
-                "It's very cold since a small window is broken and banging against the outside bricks. " +
-                "You see the medicine closet is slightly open.");
+        Room room4 = new Room("Back entrance", """
+                You are standing on a rotten carpet.
+                A bit of light enters through a broken window.
+                A sweet smell of decay comes from the the southern door""");
+        Room room5 = new Room("The dungeon", """
+                All dark. You have no sense of direction.
+                Some heavy creature is breathing nearby. It seems to be coming your way.""");
+        Room room6 = new Room("The Lounge", """
+                There are no windows in this room.
+                The only light is a small candlelight in the southeastern corner.
+                A door to the south is ajar.""");
+        Room room7 = new Room("Bedroom","""
+                The room seems to be a bedroom but it's very dark.
+                You can feel cobweb all over you and see a little reflection near the night stand.""");
+        Room room8 = new Room("Kitchen","""
+                You are in what seems to be the kitchen.
+                It's very smokey and hard to see.
+                You can faintly see a staircase but can't put a finger on the which way to get to it.""");
+        Room room9 = new Room("Bathroom","""
+                Room 9 seems to be the bathroom.
+                It's very cold since a small window is broken and banging against the outside bricks.
+                You see the medicine closet is slightly open.""");
 
         room1.setEast(room2);
         room1.setSouth(room4);
