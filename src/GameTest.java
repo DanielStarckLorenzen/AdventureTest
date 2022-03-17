@@ -24,7 +24,10 @@ public class GameTest {
 
         switch (answer) {
             case "help" -> ui.help();
-            case "exit" -> exit();
+            case "exit" -> {
+                ui.exit();
+                gameOn = false;
+            }
             case "look" -> look();
             case "north", "n", "go north" -> goNorth();
             case "south", "s", "go south" -> goSouth();
@@ -67,10 +70,6 @@ public class GameTest {
             System.out.println("Entering " + currentRoom.getName());
             look();
         } else ui.doesNotExist();
-    }
-    void exit(){
-        System.out.println("You exited the program");
-        gameOn = false;
     }
 }
 
